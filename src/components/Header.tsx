@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           <div className="h-8 w-8 rounded-md bg-primary flex items-center justify-center text-primary-foreground font-medium">
             NFC
           </div>
-          <span className="font-semibold text-lg">Vote Guardian</span>
+          <span className="font-semibold text-lg">Voting System</span>
         </Link>
         
         {isMobile ? (

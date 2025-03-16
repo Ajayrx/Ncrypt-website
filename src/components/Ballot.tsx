@@ -16,14 +16,14 @@ const Ballot: React.FC = () => {
           <div className="inline-flex items-center justify-center rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary mb-2">
             Official Ballot
           </div>
-          <h3 className="text-lg font-medium">Select Your Candidate</h3>
+          <h3 className="text-lg font-medium">Select Your Party</h3>
           <p className="text-sm text-muted-foreground mt-1">
-            Choose one candidate for each position
+            Choose one Party for the position
           </p>
         </div>
         
         <div className="mt-4 mb-6">
-          <h4 className="text-md font-medium mb-2">President</h4>
+          <h4 className="text-md font-medium mb-2">General Elections</h4>
           <RadioGroup value={selectedCandidate || ''} onValueChange={setSelectedCandidate} className="space-y-2">
             {candidates.map((candidate) => (
               <div

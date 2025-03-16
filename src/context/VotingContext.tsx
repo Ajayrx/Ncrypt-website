@@ -44,9 +44,10 @@ export const VotingProvider: React.FC<{ children: ReactNode }> = ({ children }) 
 
   // Sample candidates data
   const candidates: Candidate[] = [
-    { id: '1', name: 'Jane Smith', position: 'President' },
-    { id: '2', name: 'John Doe', position: 'President' },
-    { id: '3', name: 'Alex Johnson', position: 'President' }
+    { id: '1', name: 'Bharatiya Janata Party', position: 'General Elections' },
+    { id: '2', name: 'Biju Janata Dal', position: 'General Elections' },
+    { id: '3', name: 'Trinamool Congress', position: 'General Elections' },
+    { id: '4', name: 'Indian National Congress', position: 'General Elections' }
   ];
 
   const castVote = () => {

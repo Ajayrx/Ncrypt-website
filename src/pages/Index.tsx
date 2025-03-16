@@ -19,7 +19,7 @@ const Index = () => {
             </span>
             
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-4 text-balance">
-              NFC Vote Guardian
+              NFC Voting System
             </h1>
             
             <p className="mt-6 text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -103,24 +103,7 @@ const Index = () => {
         </div>
       </main>
       
-      <footer className="py-6 border-t border-border/40 mt-24 relative z-10">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-muted-foreground">
-            © 2023 NFC Vote Guardian. All rights reserved.
-          </p>
-          <div className="flex space-x-6 mt-4 sm:mt-0">
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Privacy
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Security
-            </a>
-            <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Documentation
-            </a>
-          </div>
-        </div>
-      </footer>
+      <footer></footer>
     </div>
   );
 };

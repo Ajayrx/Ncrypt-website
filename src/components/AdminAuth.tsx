@@ -67,7 +67,7 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ onAuthenticated }) => {
               Login
             </Button>
             <p className="text-center text-xs text-muted-foreground mt-4">
-              Default password: 0000 (for demo purposes)
+              Default password: 0000 
             </p>
           </div>
         </CardContent>
