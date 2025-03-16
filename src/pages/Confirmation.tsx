@@ -1,7 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { Navigate, useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { useVoting } from '@/context/VotingContext';
 import Header from '@/components/Header';
 import { motion } from 'framer-motion';
