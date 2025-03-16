@@ -8,11 +8,18 @@ import Header from '@/components/Header';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useVoting } from '@/context/VotingContext';
 import { toast } from 'sonner';
+import AdminAuth from '@/components/AdminAuth';
 
 const Admin = () => {
   const { candidates } = useVoting();
   const [isVerifying, setIsVerifying] = useState(false);
   const [verificationStatus, setVerificationStatus] = useState<'idle' | 'verifying' | 'success' | 'error'>('idle');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  
+  // If not authenticated, show the admin login form
+  if (!isAuthenticated) {
+    return <AdminAuth onAuthenticated={() => setIsAuthenticated(true)} />;
+  }
   
   const votes = voteStorage.getVotes();
   const results = voteStorage.getResults();

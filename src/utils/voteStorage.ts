@@ -28,6 +28,7 @@ class VoteStorage {
       const votes = this.getVotes();
       votes.push(vote);
       localStorage.setItem(this.storageKey, JSON.stringify(votes));
+      console.log('Vote saved successfully', vote);
       return true;
     } catch (error) {
       console.error('Error saving vote:', error);

@@ -1,5 +1,6 @@
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { voteStorage } from '@/utils/voteStorage';
 
 type Candidate = {
   id: string;
@@ -39,7 +40,7 @@ export const VotingProvider: React.FC<{ children: ReactNode }> = ({ children }) 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [currentStep, setCurrentStep] = useState<'nfc' | 'fingerprint' | 'vote' | 'confirmation'>('nfc');
   const [selectedCandidate, setSelectedCandidate] = useState<string | null>(null);
-  const [votes, setVotes] = useState<Vote[]>([]);
+  const [votes, setVotes] = useState<Vote[]>(voteStorage.getVotes());
 
   // Sample candidates data
   const candidates: Candidate[] = [
@@ -54,8 +55,11 @@ export const VotingProvider: React.FC<{ children: ReactNode }> = ({ children }) 
         candidateId: selectedCandidate,
         timestamp: Date.now()
       };
-      setVotes([...votes, newVote]);
-      setCurrentStep('confirmation');
+      const success = voteStorage.saveVote(newVote);
+      if (success) {
+        setVotes([...votes, newVote]);
+        setCurrentStep('confirmation');
+      }
     }
   };
 
