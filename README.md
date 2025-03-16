@@ -1,6 +1,6 @@
-## Project - NFC Card based voting System - WEBSITE
+# Project - NFC Card based voting System - WEBSITE
 
-# Made for voting can be also used in differenrt ways like voting at schools, colleges, University
+## Made for voting can be also used in differenrt ways like voting at schools, colleges, University
 
 Follow these steps to run locally:
 
