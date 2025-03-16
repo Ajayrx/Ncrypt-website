@@ -1,18 +1,12 @@
-## Project info
+## Project - NFC Card based voting System - WEBSITE
 
-NFC voting System
+# Made for voting can be also used in differenrt ways like voting at schools, colleges, University
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Follow these steps to run locally:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/Ajayrx/Ncrypt-website.git
 
 # Step 2: Navigate to the project directory.
 cd <YOUR_PROJECT_NAME>
@@ -24,12 +18,3 @@ npm i
 npm run dev
 ```
 
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
