@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from 'sonner';
+import { Lock } from 'lucide-react';
 
 interface AdminAuthProps {
   onAuthenticated: () => void;
@@ -25,10 +26,13 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ onAuthenticated }) => {
   };
   
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <Card className="w-full max-w-md bg-card/50 backdrop-blur-sm border border-border/50">
-        <CardHeader>
-          <CardTitle className="text-xl">Admin Authentication</CardTitle>
+    <div className="min-h-screen flex items-center justify-center p-4">
+      <Card className="w-full max-w-md bg-card/50 backdrop-blur-sm border border-border/50 shadow-lg">
+        <CardHeader className="pb-2">
+          <div className="mx-auto h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-3">
+            <Lock className="h-6 w-6 text-primary" />
+          </div>
+          <CardTitle className="text-xl text-center">Admin Authentication</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
@@ -44,23 +48,27 @@ const AdminAuth: React.FC<AdminAuthProps> = ({ onAuthenticated }) => {
                   setPassword(e.target.value);
                   setError(false);
                 }}
-                className={error ? "border-red-500" : ""}
+                className={`${error ? "border-red-500" : ""} transition-all duration-300`}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     handleLogin();
                   }
                 }}
+                placeholder="Enter password"
               />
               {error && (
-                <p className="text-sm text-red-500">Incorrect password</p>
+                <p className="text-sm text-red-500 animate-fade-in">Incorrect password</p>
               )}
             </div>
             <Button 
               onClick={handleLogin}
-              className="w-full"
+              className="w-full relative overflow-hidden btn-hover-effect"
             >
               Login
             </Button>
+            <p className="text-center text-xs text-muted-foreground mt-4">
+              Default password: 0000 (for demo purposes)
+            </p>
           </div>
         </CardContent>
       </Card>
