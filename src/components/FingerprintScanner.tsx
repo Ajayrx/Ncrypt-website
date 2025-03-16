@@ -45,6 +45,9 @@ const FingerprintScanner: React.FC<FingerprintScannerProps> = ({ onScanComplete 
           <p className="text-sm text-muted-foreground mt-1">
             Place your finger on the scanner for identity verification
           </p>
+          <div className="mt-2 text-xs text-amber-600 bg-amber-50 dark:bg-amber-900/20 dark:text-amber-400 px-3 py-1 rounded-full inline-flex items-center">
+            <span>Press Button to Pass the test — real Fingerprint work's in hardware prototype</span>
+          </div>
         </div>
         
         <div className="flex flex-col items-center justify-center w-full">

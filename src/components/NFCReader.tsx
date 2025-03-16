@@ -47,8 +47,8 @@ const NFCReader: React.FC<NFCReaderProps> = ({ onScanComplete }) => {
             Please place your voter ID card on the reader
           </p>
           <div className="mt-2 text-xs text-amber-600 bg-amber-50 dark:bg-amber-900/20 dark:text-amber-400 px-3 py-1 rounded-full inline-flex items-center">
-            <Smartphone size={12} className="mr-1" />
-            <span>Using mock cards for demo — real NFC cards work in hardware prototype</span>
+            {/* <Smartphone size={12} className="mr-1" /> */}
+            <span>Using Button to Pass the test — real NFC cards work in hardware prototype</span>
           </div>
         </div>
         
